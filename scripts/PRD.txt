@@ -1,0 +1,106 @@
+<context>
+# Overview
+Ultimate Sandwich Hub is a visually dynamic, content-rich web application for discovering and exploring sandwich recipes and related blog content. It is designed as a learning platform for Astro, SvelteKit, GSAP, and Directus, with a focus on animation, performance, and modern web best practices. The platform targets food enthusiasts, home cooks, and users who value engaging, modern web experiences.
+
+# Core Features
+- **Astro-based Site Structure**: Static/server rendering, routing, and layouts for performance and SEO.
+- **SvelteKit Interactive Components (Astro Islands)**: For filtering, searching, and animated UI elements.
+- **GSAP Animations**: Engaging, performant animations for hero sections, cards, transitions, and content reveals.
+- **Directus Headless CMS Integration**: Centralized management of recipes, blog posts, tags, categories, and authors.
+- **Recipe Management**: Browse, search, and filter recipes by category/tag/keyword. View detailed recipe pages with images, ingredients, and instructions.
+- **Blog Section**: List and view blog posts with dynamic loading and animated transitions.
+- **Tag & Category Navigation**: Clickable tags/categories to view all related content, with animated transitions.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile, with adaptive animations.
+- **Image Optimization**: Use Directus image transformations and lazy loading for performance.
+- **Accessibility & SEO**: Semantic HTML, ARIA attributes, meta tags, and reduced motion support.
+- **Sass/SCSS Styling**: All styling is managed using Sass (SCSS) for modular, maintainable, and customizable stylesheets.
+
+# User Experience
+- **Personas**: Foodies, home cooks, and readers interested in sandwiches and culinary content.
+- **Key User Flows**:
+  - Landing on the homepage and discovering featured recipes/blogs with animated hero and cards.
+  - Browsing and filtering recipes by category/tag or searching by keyword.
+  - Viewing detailed recipe pages with animated content sections.
+  - Exploring blog posts and navigating via tags/categories.
+- **UI/UX Considerations**:
+  - Smooth, non-jarring animations (with reduced motion support).
+  - Fast load times and responsive layouts.
+  - Clear navigation and error handling for missing or delayed content.
+  - Keyboard navigation and color contrast for accessibility.
+</context>
+<PRD>
+# Technical Architecture
+- **System Components**:
+  - Astro for static/server rendering, routing, and layouts.
+  - SvelteKit for interactive, animated UI components (Astro Islands).
+  - GSAP for frontend animations.
+  - Directus as the headless CMS (collections: recipes, blog_posts, tags, categories, authors).
+  - **Sass (SCSS) for styling** (recommended and required).
+- **Data Models**:
+  - **Recipes**: title, slug, short description, main image, ingredients, instructions, prep time, cook time, difficulty, categories (many-to-many), tags (many-to-many), status, timestamps.
+  - **Blog Posts**: title, slug, featured image, content, author (optional), tags (many-to-many), published date, status, timestamps.
+  - **Tags/Categories**: name (text).
+  - **Authors**: name, avatar (optional).
+- **APIs and Integrations**:
+  - Directus REST/GraphQL API for content fetching.
+  - Public read access for published content and images.
+- **Infrastructure Requirements**:
+  - Hosting for Astro frontend (e.g., Vercel, Netlify).
+  - Hosting for Directus instance (cloud or self-hosted).
+
+# Development Roadmap
+- **MVP Requirements**:
+  - Set up Directus with required collections and permissions.
+  - Scaffold Astro project with routing and layouts.
+  - Integrate SvelteKit islands for filter/search and animated components.
+  - Implement homepage, recipe listing, recipe detail, blog listing, and blog detail pages.
+  - Add GSAP-powered animations to key UI elements.
+  - Ensure responsive design, accessibility, and SEO best practices.
+  - **Implement all styles using Sass (SCSS) and remove any Tailwind CSS references.**
+  - Optimize images and handle API errors gracefully.
+- **Future Enhancements**:
+  - User accounts, favorites, and recipe submission.
+  - Comments, ratings, and advanced filtering.
+  - Dedicated tag/category listing pages.
+  - Integration with external search or analytics services.
+  - Automated/manual testing, including animation tests.
+
+# Logical Dependency Chain
+- **Foundation**:
+  - Directus CMS setup (collections, permissions, sample data).
+  - Astro project scaffolding and base routing.
+- **Core Functionality**:
+  - Data fetching from Directus for homepage, recipes, and blogs.
+  - SvelteKit islands for filtering/search and animated UI.
+  - GSAP integration for animations.
+  - **Sass (SCSS) integration for all styles.**
+- **User-Facing Features**:
+  - Recipe and blog listing/detail pages.
+  - Tag/category navigation and animated transitions.
+- **Polish & Optimization**:
+  - Responsive design, accessibility, SEO, and image optimization.
+  - Error handling and performance tuning.
+- **Enhancements**:
+  - Future features as outlined above.
+
+# Risks and Mitigations
+- **Technical Challenges**:
+  - Learning curve for Astro, SvelteKit, GSAP, Directus, and Sass. *Mitigation*: Start with simple integrations and iterate.
+  - Animation performance on mobile. *Mitigation*: Test early and optimize GSAP usage.
+  - API/data fetching errors. *Mitigation*: Implement robust error handling and loading states.
+- **MVP Scope**:
+  - Risk of over-engineering. *Mitigation*: Focus on core flows and polish before adding enhancements.
+- **Resource Constraints**:
+  - Time and hosting for Directus. *Mitigation*: Use cloud-hosted Directus or local dev instance initially.
+
+# Appendix
+- **Research Findings**:
+  - Astro + SvelteKit islands provide optimal performance and flexibility for modern web apps.
+  - GSAP is widely used for performant, creative web animations.
+  - Directus offers flexible, API-driven content management.
+  - **Sass (SCSS) is a robust, maintainable styling solution for scalable projects.**
+- **Technical Specifications**:
+  - Use semantic HTML, ARIA, and meta tags for SEO/accessibility.
+  - **All styles must be implemented using Sass (SCSS).**
+  - All images should be optimized and lazy-loaded.
+</PRD> 
