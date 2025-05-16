@@ -1,0 +1,41 @@
+[
+	{
+		"title": "Ultimate Grilled Cheese-2",
+		"slug": "ultimate-grilled-cheese-2",
+		"short_description": "A gooey, crispy classic with a twist.",
+		"categories": [],
+		"tags": ["Vegetarian", "Quick", "Easy", "Lunch", "Comfort Food", "Classic"],
+		"ingredients": [
+			{
+				"name": "Bread",
+				"amount": "2 slices"
+			},
+			{
+				"name": "Cheddar Cheese",
+				"amount": "2 slices"
+			},
+			{
+				"name": "Butter",
+				"amount": "1 tbsp"
+			}
+		],
+		"instructions": [
+			{
+				"step": "Butter the bread."
+			},
+			{
+				"step": "Add cheese between slices."
+			},
+			{
+				"step": "Grill until golden brown."
+			}
+		],
+		"prep_time": "5",
+		"cook_time": "10",
+		"difficulty": [
+			"easy"
+		],
+		"status": "published",
+		"date_published": "2025-05-15"
+	}
+]

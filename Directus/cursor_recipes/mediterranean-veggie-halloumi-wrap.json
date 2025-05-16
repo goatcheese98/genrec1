@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Mediterranean Veggie & Halloumi Wrap",
+    "slug": "mediterranean-veggie-halloumi-wrap",
+    "short_description": "Grilled halloumi and roasted vegetables with a tangy tzatziki sauce in a warm wrap.",
+    "ingredients": [
+      { "name": "Whole Wheat Wrap", "amount": "1 large" },
+      { "name": "Halloumi Cheese, sliced", "amount": "75g" },
+      { "name": "Red Bell Pepper, sliced", "amount": "1/2" },
+      { "name": "Green Bell Pepper, sliced", "amount": "1/2" },
+      { "name": "Zucchini, sliced", "amount": "1/2" },
+      { "name": "Red Onion, sliced", "amount": "1/4" },
+      { "name": "Olive Oil", "amount": "1 tbsp" },
+      { "name": "Greek Yogurt (for tzatziki)", "amount": "1/4 cup" },
+      { "name": "Cucumber, grated (for tzatziki)", "amount": "2 tbsp" },
+      { "name": "Lemon Juice (for tzatziki)", "amount": "1 tsp" },
+      { "name": "Garlic, minced (for tzatziki)", "amount": "1/2 clove" },
+      { "name": "Fresh Dill, chopped (for tzatziki)", "amount": "1 tbsp" }
+    ],
+    "instructions": [
+      { "step": "Preheat oven to 400°F (200°C). Toss bell peppers, zucchini, and red onion with olive oil, salt, and pepper. Roast for 20 minutes." },
+      { "step": "While veggies roast, prepare tzatziki: mix Greek yogurt, grated cucumber, lemon juice, minced garlic, and chopped dill." },
+      { "step": "Slice halloumi and grill or pan-fry until golden brown on both sides." },
+      { "step": "Warm whole wheat wraps." },
+      { "step": "Assemble wraps: spread tzatziki, add roasted veggies and grilled halloumi." }
+    ],
+    "prep_time": "15",
+    "cook_time": "25",
+    "difficulty": ["medium"],
+    "status": "published",
+    "date_published": "2025-05-17",
+    "categories": [],
+    "tags": ["Vegetarian", "Mediterranean", "Wrap", "Lunch", "Healthy", "Grill", "Halloumi"]
+  }
+] 

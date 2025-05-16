@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Ultimate Grilled Cheese",
+    "slug": "ultimate-grilled-cheese",
+    "short_description": "A gooey, crispy classic with a twist.",
+    "ingredients": [
+      { "name": "Hearty White Bread", "amount": "2 slices" },
+      { "name": "Sharp Cheddar Cheese", "amount": "2 slices" },
+      { "name": "Gruyere Cheese", "amount": "1 slice" },
+      { "name": "Butter, softened", "amount": "1 tbsp" }
+    ],
+    "instructions": [
+      { "step": "Butter both sides of each bread slice." },
+      { "step": "Place cheese between slices." },
+      { "step": "Grill in a non-stick pan over medium-low heat for 3-4 minutes per side, until golden brown and cheese is melted." }
+    ],
+    "prep_time": "5",
+    "cook_time": "10",
+    "difficulty": ["easy"],
+    "status": "published",
+    "date_published": "2025-05-15",
+    "categories": [],
+    "tags": ["Vegetarian", "Quick", "Easy", "Lunch", "Comfort Food", "Classic", "Grilled Cheese", "Hot Sandwich"]
+  }
+] 

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Spicy Chorizo & Manchego Baguette",
+    "slug": "spicy-chorizo-manchego-baguette",
+    "short_description": "A fiery Spanish-inspired delight with smoky chorizo and rich Manchego cheese.",
+    "ingredients": [
+      { "name": "Mini Baguette", "amount": "1" },
+      { "name": "Spicy Chorizo, thinly sliced", "amount": "50g" },
+      { "name": "Manchego Cheese, thinly sliced", "amount": "50g" },
+      { "name": "Extra Virgin Olive Oil", "amount": "1 tsp" },
+      { "name": "Smoked Paprika", "amount": "1/4 tsp" }
+    ],
+    "instructions": [
+      { "step": "Preheat oven to 375°F (190°C)." },
+      { "step": "Slice baguette horizontally, not all the way through." },
+      { "step": "Layer sliced chorizo and Manchego cheese inside the baguette." },
+      { "step": "Drizzle with a touch of olive oil and a pinch of smoked paprika." },
+      { "step": "Wrap in foil and bake for 10-12 minutes, or until cheese is melted and baguette is heated through. Unwrap for the last 2 minutes for a crispier crust." }
+    ],
+    "prep_time": "10",
+    "cook_time": "15",
+    "difficulty": ["easy"],
+    "status": "published",
+    "date_published": "2025-05-16",
+    "categories": [],
+    "tags": ["Spicy", "Chorizo", "Pork", "Cheese", "Spanish", "Baguette", "Baked", "Hot Sandwich", "Lunch"]
+  }
+]

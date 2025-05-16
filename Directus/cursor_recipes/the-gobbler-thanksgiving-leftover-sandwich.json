@@ -1,0 +1,30 @@
+[
+  {
+    "title": "\"The Gobbler\" Thanksgiving Leftover Sandwich",
+    "slug": "the-gobbler-thanksgiving-leftover-sandwich",
+    "short_description": "The ultimate post-Thanksgiving creation, piling all the best leftovers into one epic sandwich.",
+    "ingredients": [
+      { "name": "Hearty Bread (e.g., Sourdough, Rye)", "amount": "2 slices" },
+      { "name": "Cooked Turkey, sliced", "amount": "150g" },
+      { "name": "Stuffing/Dressing", "amount": "1/2 cup" },
+      { "name": "Cranberry Sauce", "amount": "2 tbsp" },
+      { "name": "Mayonnaise (optional)", "amount": "1 tsp" },
+      { "name": "Gravy (optional)", "amount": "1 tbsp" }
+    ],
+    "instructions": [
+      { "step": "Lightly toast slices of hearty bread." },
+      { "step": "Spread a thin layer of mayonnaise or leftover gravy on one slice of bread." },
+      { "step": "Layer generously with sliced turkey and a scoop of stuffing." },
+      { "step": "Top with cranberry sauce." },
+      { "step": "Optional: Add a slice of cheese like provolone or a bit more gravy." },
+      { "step": "Place the other slice of bread on top and slice in half." }
+    ],
+    "prep_time": "5",
+    "cook_time": "5",
+    "difficulty": ["easy"],
+    "status": "published",
+    "date_published": "2025-11-28",
+    "categories": [],
+    "tags": ["Thanksgiving", "Leftovers", "Turkey", "Sandwich", "Holiday", "Quick", "Easy", "Comfort Food"]
+  }
+] 

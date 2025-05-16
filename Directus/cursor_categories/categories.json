@@ -1,0 +1,66 @@
+[
+	{
+		"id": 1,
+		"name": "Vegetarian"
+	},
+	{
+		"id": 2,
+		"name": "Chicken"
+	},
+	{
+		"id": 3,
+		"name": "Breakfast"
+	},
+	{
+		"id": 4,
+		"name": "Classic"
+	},
+	{
+		"id": 5,
+		"name": "Spanish"
+	},
+	{
+		"id": 6,
+		"name": "Hot Sandwich"
+	},
+	{
+		"id": 7,
+		"name": "Lunch"
+	},
+	{
+		"id": 8,
+		"name": "Comfort Food"
+	},
+	{
+		"id": 9,
+		"name": "Appetizer"
+	},
+	{
+		"id": 10,
+		"name": "Spicy Food"
+	},
+	{
+		"id": 11,
+		"name": "Mediterranean"
+	},
+	{
+		"id": 12,
+		"name": "Wraps"
+	},
+	{
+		"id": 13,
+		"name": "Holiday"
+	},
+	{
+		"id": 14,
+		"name": "Leftovers"
+	},
+	{
+		"id": 15,
+		"name": "Sandwich"
+	},
+	{
+		"id": 16,
+		"name": "American"
+	}
+] 
