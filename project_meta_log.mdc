@@ -1,0 +1,312 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# GenRec Project Meta-Log
+
+**Purpose and Intention:**
+
+This document is a comprehensive meta-log for the GenRec project, consolidating critical project information into a single, easily manageable file. It aims to streamline project tracking, documentation, and AI-assisted development workflows.
+
+Each of the original aspects (Memory Log, Structure Guide, Debug List) is maintained in its own dedicated section for instructions, followed by their respective content areas. Please refer to the specific section preambles for details on how to use and maintain each part of this consolidated log.
+
+Regular updates to the relevant sections are crucial for maintaining this document as a valuable project resource.
+
+---
+
+## Project Memory Log Instructions
+
+**Purpose and Intention:**
+
+This file serves as a detailed log for development activities and AI-assisted interactions within this project. Its primary purposes are:
+
+1.  **Prompt Storage:** To record the exact prompts, queries, or instructions given to an AI assistant (e.g., Cursor).
+2.  **Implementation History:** To track the success rate and number of attempts for implementing solutions based on those prompts (e.g., "first try success," "succeeded at third try").
+3.  **Solution Repository:** To document the final, successful solutions, including relevant code snippets and explanations, especially for issues that required multiple attempts or complex fixes. This helps in learning from past challenges.
+4.  **Key Information Capture:** To store any specific information, instructions, or context that the user explicitly asks the AI assistant to remember for the current project or for future reference.
+
+This log aims to improve the development process, provide a persistent memory for AI-assisted coding sessions, and facilitate learning from past interactions and solutions.
+
+---
+
+## Project Directory Structure Guide Instructions
+
+**Purpose and Intention:**
+
+This document outlines the main directory and file structure of the GenRec project. Its purpose is to:
+
+1.  **Provide a Clear Overview:** Offer a visual map of how the project's files and folders are organized.
+2.  **Guide Development:** Help developers understand where to find existing code and where to place new files and features, ensuring consistency.
+3.  **Maintain Consistency:** Encourage a standardized project structure as the project evolves.
+4.  **Onboarding Aid:** Assist new team members or collaborators in quickly familiarizing themselves with the codebase layout.
+
+This guide should be updated regularly to accurately reflect the current state of the project's architecture.
+
+---
+
+## Project Debug List and Issue Tracker Instructions
+
+**Purpose and Intention:**
+
+This file serves as a living list of pending issues, bugs, areas for improvement, and points to revisit within the GenRec project. Its purpose is to:
+
+1.  **Track Known Issues:** Maintain a centralized, numbered record of problems, bugs, or unexpected behaviors that need to be addressed.
+2.  **Prioritize Debugging & Refinement:** Help developers identify and focus on important fixes or enhancements.
+3.  **Document Problem Details:** Store specific information about each item, including:
+    *   A clear description of the problem or desired change.
+    *   Steps to reproduce (if applicable for bugs).
+    *   Current status (e.g., pending, under investigation, resolved).
+    *   Potential causes or areas to investigate.
+    *   Proposed or implemented solutions, with notes on what was tried and what worked.
+4.  **Facilitate Collaboration:** Allow team members (and AI assistants) to be aware of ongoing work and historical context for issues.
+5.  **Knowledge Base:** For resolved issues, a note on the solution and steps taken should be included for future reference, learning, and to avoid repeating past mistakes.
+
+This list should be updated regularly as new items are discovered and existing ones are resolved.
+
+---
+---
+## Logged Content and Tracked Information
+---
+
+### Memory Log Entries
+
+1.  **Hero Animation Implementation & Test Placement (Date: YYYY-MM-DD - Please fill in actual date)**
+    *   **Prompt/Goal:** User reported the main hero animation was just a blue banner and needed fixing. Later, user requested this be tested on the `gsap-tests.astro` page, and that new tests should always appear at the top of this page.
+    *   **Implementation History & Attempts:**
+        1.  Read `AST/src/components/svelte/HeroAnimation.svelte`. Identified placeholder content and commented-out GSAP.
+        2.  Updated `HeroAnimation.svelte` with a background image, subtitle, CTA, improved styling, and GSAP animations for element entrances.
+        3.  Realized `HeroAnimation.svelte` was not directly used on the homepage (`AST/src/pages/index.astro`), which instead used `AST/src/components/homepage/HeroSection.astro`.
+        4.  Updated `AST/src/components/homepage/HeroSection.astro` to import and use `HeroAnimation.svelte` with `client:load`.
+        5.  User confirmed the animation was visible on `index.astro` but reminded about the `gsap-tests.astro` page and the top-placement rule for new tests.
+        6.  Searched for and found `AST/src/pages/gsap-tests.astro`.
+        7.  Read `gsap-tests.astro` and identified an existing section for "Hero Section Entrance Animation".
+        8.  Updated `gsap-tests.astro` to import `HeroAnimation.svelte` (commenting out a potentially old `HeroEntranceAnimation.svelte` import) and used it in the relevant test section, adjusting container styles.
+        9.  User confirmed visibility but reiterated the top-placement rule.
+        10. Modified `gsap-tests.astro` to move the "Hero Section Animation Test" section to be the first child of the `<main>` element.
+    *   **Final Solution:** The `HeroAnimation.svelte` component was enhanced with a proper background, content, and GSAP animations. It was then correctly integrated into `AST/src/components/homepage/HeroSection.astro` for the main homepage. For testing purposes, it was added to `AST/src/pages/gsap-tests.astro`, and its test section was moved to the top of the page as per user instructions.
+    *   **Files Modified:**
+        *   `AST/src/components/svelte/HeroAnimation.svelte`
+        *   `AST/src/components/homepage/HeroSection.astro`
+        *   `AST/src/pages/gsap-tests.astro`
+
+2.  **EdgeScrollCarousel Test Implementation (Date: YYYY-MM-DD - Please fill in actual date)**
+    *   **Prompt/Goal:** User requested to display the newly created `EdgeScrollCarousel.astro` component on the `AST/src/pages/gsap-tests.astro` page, containing 5 `ExpandingRecipeCard.svelte` instances.
+    *   **Implementation History & Attempts:**
+        1.  Read `AST/src/pages/gsap-tests.astro` to understand its structure and obtain sample recipe data.
+        2.  Prepared an array of 5 `RecipeItem` objects, reusing and adapting existing data.
+        3.  Modified `AST/src/pages/gsap-tests.astro` by:
+            *   Importing `EdgeScrollCarousel.astro` and `RecipeItem` type.
+            *   Defining the `carouselRecipeItems` array in the frontmatter.
+            *   Adding a new test section at the top of the page, instantiating `<EdgeScrollCarousel items={carouselRecipeItems} carouselTitle="Dynamic Edge Scroll" client:visible />`.
+    *   **Final Solution:** A new test section was successfully added to the top of `AST/src/pages/gsap-tests.astro` to display the `EdgeScrollCarousel.astro` component, populated with 5 distinct `ExpandingRecipeCard.svelte` instances.
+    *   **Files Modified:**
+        *   `AST/src/pages/gsap-tests.astro`
+
+3.  **Astro Edge-Hover Carousel (`EdgeHoverCarousel.astro`) Investigation (Date: YYYY-MM-DD - Please fill in current date)**
+    *   **Prompt/Goal:** Develop an Astro component (`EdgeHoverCarousel.astro`) for a recipe carousel with edge-hover auto-scrolling functionality, using `ExpandingRecipeCard.svelte` for items.
+    *   **Implementation History & Attempts (Failed):**
+        1.  **Initial Creation (`EdgeScrollCarousel.astro`, later renamed/recreated as `EdgeHoverCarousel.astro`):**
+            *   Created the Astro component with props for items, title, and scrollSpeed.
+            *   Included HTML for wrapper, viewport, track, and hover trigger zones.
+            *   Attempted to use client-side JavaScript (`astro:page-load`) with `define:vars` to pass `scrollSpeed`.
+            *   **Issue:** Encountered a persistent parsing error: `Expected "}" but found ":"` related to the `define:vars` line. This occurred even with simplified literal values and after removing `define:vars` entirely, suggesting potential caching or build issues with this specific file.
+        2.  **Recreation as `EdgeHoverCarousel.astro`:**
+            *   To sidestep potential file-specific issues, a new component `EdgeHoverCarousel.astro` was created with similar structure.
+            *   The script initially used `define:vars` for a hardcoded scroll speed, which *did not* throw the parsing error this time.
+            *   When integrated into `gsap-tests.astro`, the component rendered, but scrolling functionality was absent.
+        3.  **Debugging Script Execution:**
+            *   **Problem:** Client-side JavaScript in `EdgeHoverCarousel.astro` appeared not to be running or was erroring out silently before logs.
+            *   **Attempts:**
+                *   Reinstated `scrollSpeed` prop and passed via `define:vars`.
+                *   Implemented `requestAnimationFrame` for acceleration/deceleration – no effect.
+                *   Reverted to simpler `setInterval` logic with extensive `console.log` statements – no logs from trigger zones or interval.
+                *   Made trigger zones highly visible with inline styles (background, border, z-index) – triggers not visible, no logs on hover.
+                *   Suspected `querySelector` was failing to find trigger elements.
+                *   Removed `aria-hidden` from triggers – no change.
+                *   Simplified script to only find the first carousel wrapper and its triggers, applying aggressive styling and logging on `mouseenter`/`mouseleave` to change background color – no visible triggers, no logs.
+                *   Stripped script down to a single, top-level `console.log('[[[ SCRIPT EXECUTION TEST ... ]]]')` – no message in console.
+                *   Verified `gsap-tests.astro` was correctly importing and using `<EdgeHoverCarousel ... client:visible />`.
+    *   **Conclusion (Tentative):** The primary issue with `EdgeHoverCarousel.astro` seems to be a fundamental problem with its client-side JavaScript execution within the Astro environment for that specific component instance. The root cause was not identified despite numerous attempts to simplify and debug. Data integrity for child components (`ExpandingRecipeCard.svelte`) was later confirmed to be okay when a Svelte-based carousel (`SvelteEdgeCarousel.svelte`) using the same child components and similar data structure worked correctly.
+    *   **Status:** Investigation paused. A Svelte-based alternative (`SvelteEdgeCarousel.svelte`) was successfully implemented and deployed instead.
+    *   **Files Involved:**
+        *   `AST/src/components/carousels/EdgeScrollCarousel.astro` (initial problematic version)
+        *   `AST/src/components/carousels/EdgeHoverCarousel.astro` (second problematic Astro version)
+        *   `AST/src/pages/gsap-tests.astro` (for testing integration)
+
+---
+
+### Project Directory Structure
+
+This document outlines the main directory and file structure of the GenRec project.
+
+#### Root Directory (`/`)
+
+-   `.gitignore`
+-   `.gitmodules`
+-   `.roomodes`
+-   `.taskmasterconfig`
+-   `.windsurfrules`
+-   `package.json`
+-   `package-lock.json`
+-   `project_meta_log.mdc`
+-   `svelte_sveltekit_llms-full.txt`
+-   `AST/` (Nested Astro Project/Module - See details below)
+-   `Directus/`
+    -   `data_model.md`
+    -   `cursor_categories/`
+        -   `categories.json`
+    -   `cursor_recipes/`
+        -   `mediterranean-veggie-halloumi-wrap.json`
+        -   `spicy-chorizo-manchego-baguette.json`
+        -   `tags.md`
+        -   `test1.json`
+        -   `the-gobbler-thanksgiving-leftover-sandwich.json`
+        -   `ultimate-grilled-cheese.json`
+-   `scripts/`
+    -   `PRD.txt`
+    -   `task-complexity-report.json`
+-   `tasks/`
+    -   `task_001.txt`
+    -   `task_002.txt`
+    -   `task_003.txt`
+    -   `task_004.txt`
+    -   `task_005.txt`
+    -   `task_006.txt`
+    -   `task_007.txt`
+    -   `task_008.txt`
+    -   `task_009.txt`
+    -   `task_010.txt`
+    -   `task_011.txt`
+    -   `task_012.txt`
+    -   `task_013.txt`
+    -   `task_014.txt`
+    -   `task_015.txt`
+    -   `task_016.txt`
+    -   `tasks.json`
+    -   `tasks.json.bak`
+
+#### `AST/` Directory (Nested Project/Module)
+
+**IMPORTANT REMINDER: All new frontend files and folders (components, pages, layouts, assets, etc.) for the main application MUST be created *within* this `AST/` directory and its subdirectories (e.g., `AST/src/components/`, `AST/src/pages/`). Avoid creating these in the root-level `src/` directory.**
+
+-   `AST/`
+    -   `.gitignore`
+    -   `README.md`
+    -   `astro.config.mjs`
+    -   `package.json`
+    -   `package-lock.json`
+    -   `tsconfig.json`
+    -   `public/`
+        -   `favicon.svg`
+        -   `images/` (*Added - assuming image paths like '/images/sandwiches/blt-deluxe.webp' imply this folder*)
+            -   `sandwiches/`
+                -   `blt-deluxe.webp`
+                -   `chorizo-melt.webp`
+                -   `avocado-chickpea.webp`
+                -   `italian-sub.webp`
+                -   `salmon-bagel.webp`
+            -   `placeholder-blt-supreme.webp` (*from gsap-tests*)
+            -   `placeholder-chorizo-fiesta.webp` (*from gsap-tests*)
+            -   `placeholder-veggie-svelte.webp` (*from gsap-tests*)
+            -   `placeholder-club-svelte.webp` (*from gsap-tests*)
+    -   `src/`
+        -   `assets/`
+            -   `astro.svg`
+            -   `background.svg`
+        -   `components/`
+            -   `Welcome.astro`
+            -   `carousels/` (*Added*)
+                -   `EdgeHoverCarousel.astro` (*Non-functional: Client-script execution failure, replaced by Svelte version. Kept for reference from Memory Log Entry 3*)
+                -   `EdgeScrollCarousel.astro` (*Non-functional: Initial problematic version, deprecated. Kept for reference from Memory Log Entry 3*)
+            -   `decor/` (Empty)
+            -   `homepage/`
+                -   `CategoryTagsNavigationSection.astro`
+                -   `FeaturedRecipesSection.astro`
+                -   `HeroSection.astro`
+                -   `LatestBlogPostsSection.astro`
+            -   `svelte/`
+                -   `ColorFontTestIsland.svelte`
+                -   `DetailedSandwichAssembly.svelte`
+                -   `ExpandingRecipeCard.svelte` (*New component, used by SvelteEdgeCarousel*)
+                -   `FeaturedSlider.svelte` (*Replaced by SvelteEdgeCarousel on homepage*)
+                -   `GsapTestBox.svelte`
+                -   `HeroAnimation.svelte`
+                -   `RecipeCard.svelte`
+                -   `SandoHubLogo.svelte`
+                -   `SandwichStacker.svelte`
+                -   `SvelteEdgeCarousel.svelte` (*New and active carousel component*)
+                -   `TestIsland.svelte`
+                -   `TopDownSandwichAssembly.svelte`
+        -   `layouts/`
+            -   `BaseLayout.astro`
+            -   `components/`
+                -   `Footer.astro`
+                -   `Header.astro`
+                -   `Navigation.astro`
+        -   `pages/`
+            -   `gsap-tests.astro`
+            -   `index.astro`
+            -   `style-tests.astro`
+            -   `test-page.astro`
+        -   `services/`
+            -   `blogService.js`
+            -   `directus.js`
+            -   `directus.ts`
+            -   `imageService.js`
+            -   `recipeService.js`
+            -   `tagService.js`
+        -   `styles/`
+            -   `main.scss`
+            -   `base/`
+                -   `_animations.scss`
+                -   `_base.scss`
+                -   `_reset.scss`
+                -   `_typography.scss`
+                -   `_utilities.scss`
+                -   `_variables.scss`
+            -   `components/`
+                -   `.gitkeep`
+                -   `_buttons.scss`
+                -   `_cards.scss`
+                -   `_dropdowns.scss`
+                -   `_forms.scss`
+                -   `_nav-buttons.scss`
+                -   `_navigation.scss`
+                -   `_todos.scss`
+            -   `layouts/`
+                -   `.gitkeep`
+                -   `_grid.scss`
+            -   `utils/`
+                -   `_functions.scss`
+                -   `_mixins.scss`
+
+---
+*This structure is based on a snapshot and should be updated as the project evolves.*
+
+---
+
+### Debug List and Tracked Issues
+
+1.  **FeaturedSlider.svelte Issues:**
+    *   **Image Display Problem:** Images are not rendering; only alt text is visible.
+        *   Current image `src` attributes use `via.placeholder.com` URLs, which should generally work.
+        *   The SCSS for `.card-image-container` and `img` tags appears correct (uses standard aspect ratio box and `object-fit: cover`).
+        *   **Troubleshooting Steps (Pending User Feedback):**
+            *   Check browser developer tools' "Network" tab for image request statuses (e.g., 200, 404, CORS errors).
+            *   Check browser developer tools' "Console" for Content Security Policy (CSP) errors or other relevant messages.
+            *   Verify no ad blockers or network policies are interfering with `via.placeholder.com`.
+    *   **Animation Enhancement & Interaction:**
+        *   The current GSAP scroll-triggered slide-in animation works, but a more modern and engaging feel is desired.
+            *   Consider exploring more complex GSAP animation sequences.
+            *   Investigate using SCSS for more intricate hover effects, transitions, or potentially even SCSS-driven animations if GSAP proves too complex for certain subtle effects.
+            *   Explore different easing functions and timing for a smoother, more professional result.
+        *   **Hover Issue:** When hovering over one recipe card, all cards in the slider visually expand (e.g., `transform: scale` effect applies to all). Only the actually hovered card shows expanded details. The expansion effect should be isolated to the single card being hovered.
+        *   **Auto-Scrolling (Feature Request):** Implement auto-scrolling functionality when the user hovers near the left/right edges of the slider container. (This has not been implemented yet).
+
+2.  **Development Workflow Reminder: New Animation Test Placement**
+    *   **Description:** When adding new animation tests to the `AST/src/pages/gsap-tests.astro` page, they must be placed as the first section within the `<main>` content area.
+    *   **Status:** Active reminder.
+    *   **Context:** User instruction provided during Hero Animation testing.
+
+

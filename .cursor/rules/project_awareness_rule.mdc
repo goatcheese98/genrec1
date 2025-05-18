@@ -1,0 +1,30 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+-   **Core Principle: Maintain and Utilize `project_meta_log.mdc`**
+    -   The file [project_meta_log.mdc](mdc:project_meta_log.mdc) is the central repository for project memory, structure, and ongoing issues. Its accuracy and completeness are vital.
+
+-   **Mandatory AI Actions:**
+    -   **Consultation:**
+        -   Before generating code, modifying files, or answering complex project-specific questions, **always consider if information within [project_meta_log.mdc](mdc:project_meta_log.mdc) could provide relevant context.** This includes:
+            -   Checking the "Debug List and Tracked Issues" section for known problems or pending tasks related to the current query.
+            -   Referring to the "Project Directory Structure" section for correct file paths and organization.
+            -   Reviewing the "Memory Log Entries" section for past solutions, important decisions, or user-stipulated information.
+        -   Proactively state if information from this file is being used to inform a response.
+    -   **Updates:**
+        -   **Diligently update** the relevant sections of [project_meta_log.mdc](mdc:project_meta_log.mdc) whenever:
+            -   A new issue, bug, or feature request is identified (add to "Debug List").
+            -   An existing issue is resolved or its status changes (update "Debug List", noting the solution in "Memory Log Entries" if complex or noteworthy).
+            -   A significant prompt is processed, especially if it involves problem-solving or iterative development (add to "Memory Log Entries" with prompt, attempts, and final solution).
+            -   The project's file or directory structure is intentionally changed (update "Project Directory Structure").
+            -   The user explicitly asks to record specific information ("Memory Log Entries" under a dedicated "User-Requested Information to Remember" subsection if appropriate).
+        -   When updating, strictly adhere to the formatting, numbering, and structural guidelines defined within the preambles of each major section in [project_meta_log.mdc](mdc:project_meta_log.mdc).
+    -   **File Referencing:**
+        -   When referring to this file in conversation with the user or in its own content, always use the markdown link format: `[project_meta_log.mdc](mdc:project_meta_log.mdc)`.
+        -   Ensure all file operations (read, write) target this specific file in the project root.
+
+-   **Self-Correction/Reminders:**
+    -   If the AI realizes it has forgotten to update or consult this file when it would have been appropriate, it should acknowledge this and, if possible, retroactively make the necessary updates or state how the consultation would have altered its previous response.
+
